@@ -9,14 +9,14 @@ import { openWhatsApp } from "../utils/whatsapp";
 
 export default function Home() {
   return (
-    <section class="relative min-h-screen bg-[#1e2b8b] overflow-hidden font-sans flex flex-col">
-      <nav class="flex items-center justify-between px-8 py-6 w-full max-w-7xl mx-auto">
+    <section class="relative min-h-screen bg-linear-to-r from-[#22267F] to-[#265384] overflow-hidden font-sans flex flex-col">
+      <nav class="flex items-center justify-between px-12 py-6 w-full max-w-7xl mx-auto">
         <div class="flex items-center gap-1">
           <img src={Logo} alt="Conecta Migrantes logo" />
         </div>
 
         <div class="flex items-center gap-4">
-          <button class="flex items-center gap-2 border border-white/40 text-white px-4 py-1.5 rounded-lg hover:bg-white/10 transition">
+          <button class="flex items-center gap-2 border border-white/40 text-white px-4 py-1.5 rounded-lg hover:bg-white/10 cursor-pointer transition">
             <img src={Languages} class="w-4" />
             <img
               src="https://flagcdn.com/w20/br.png"
@@ -26,7 +26,7 @@ export default function Home() {
             <span class="text-sm font-medium">Português</span>
           </button>
 
-          <button class="flex items-center gap-2 bg-white text-gray-700 px-4 py-1.5 rounded-lg shadow-md hover:bg-gray-100 transition">
+          <button class="flex items-center gap-2 bg-white text-gray-700 px-4 py-1.5 rounded-lg shadow-md hover:bg-gray-100 cursor-pointer transition">
             <img
               src="https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
               alt="Google"
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <div class="grow flex px-8 max-w-7xl mx-auto">
+      <div class="grow flex px-15 max-w-7xl max-h-3xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
           <div class="z-10 text-white max-w-2xl">
             <div class="inline-flex items-center gap-2 bg-[#2a3ba0] border border-white/10 px-4 py-2 rounded-full mb-8">
@@ -47,10 +47,10 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 class="text-5xl font-extrabold leading-tight mb-6">
+            <h1 class="text-4xl font-extrabold leading-tight mb-6">
               Conectando imigrantes a
-              <span class="text-[#86ef6d]"> oportunidades, serviços</span> e
-              <span class="text-[#86ef6d]"> direitos</span> no Brasil.
+              <span class="text-[#7EBE4F]"> oportunidades, serviços</span> e
+              <span class="text-[#7EBE4F]"> direitos</span> no Brasil.
             </h1>
 
             <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-md">
@@ -59,23 +59,23 @@ export default function Home() {
               jornada com dignidade e segurança.
             </p>
 
-            <div class="flex items-center gap-4">
-              <button class="bg-[#86ef6d] text-[#1e2b8b] px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-[#75d65e] transition">
+            <div class="flex items-center gap-4 text-2xl">
+              <button class="font-[lexend] bg-[#7EBE4F] text-white px-8 py-3 rounded-full flex items-center gap-2 hover:bg-[#7EBE4F] hover:scale-101 cursor-pointer transition">
                 Conheça nossa plataforma
-                <img src={Arrow}/>
+                <img src={Arrow} />
               </button>
 
-              <button class="w-12 h-12 flex items-center justify-center bg-white rounded-full hover:scale-105 transition shadow-lg">
+              <button class="w-14 h-14 flex items-center justify-center bg-white rounded-full hover:scale-105 cursor-pointer transition shadow-lg">
                 <img src={PlayStore} class="w-5" />
               </button>
             </div>
           </div>
 
-          <div class="relative flex justify-center items-end h-full">
+          <div class="relative flex justify-center items-end top-55 right-8 h-full">
             <img
               src={HeroImg}
               alt="Illustration of people connecting"
-              className="w-full h-auto object-contain scale-112"
+              className="w-full h-auto object-contain scale-300"
             />
           </div>
         </div>
