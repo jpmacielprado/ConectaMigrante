@@ -1,6 +1,4 @@
-import Home from "./pages/Home.jsx";
-import Button from "./components/Button";
-import { openWhatsApp } from "./utils/whatsapp";
+import Home from "./pages/Home.js";
 import {
   BrowserRouter as Router,
   Routes,
@@ -12,11 +10,11 @@ import {
 // Troque o 'role' para testar os acessos: 'admin', 'prefeitura', 'empresa' ou 'user'
 const user = {
   isLogged: true,
-  role: "admin",
+  role: "user",
 };
 
 // Componente de Proteção de Rota
-const ProtectedRoute = ({ children, allowedRoles }) => {
+const ProtectedRoute = ({ children, allowedRoles }: { children: React.ReactNode; allowedRoles: string[] }) => {
   if (!user.isLogged) return <Navigate to="/login" />;
   if (!allowedRoles.includes(user.role)) return <Navigate to="/" />;
   return children;
