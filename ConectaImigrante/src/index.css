@@ -3,3 +3,10 @@
 *{
     font-family: 'Lexend', sans-serif;
 }
+:root {
+  --cor-primaria: #22267F; /* Azul */
+  --cor-secundaria: #7EBE4F; /* Verde */
+  --verde-escuro: #00521F; /* Verde Escuro */
+  --azul-claro: #265384; /* Azul Claro */
+  --cor-branca: #ffffff;
+}
