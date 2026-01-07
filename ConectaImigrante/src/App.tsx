@@ -1,5 +1,9 @@
 import Home from "./pages/Home.tsx";
 import Login from "./pages/Login.tsx";
+import User from "./pages/User.tsx";
+import Prefeitura from "./pages/Prefeitura.tsx";
+import Empresa from "./pages/Empresa.tsx";
+import Admin from "./pages/Admin.tsx";
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,7 +15,7 @@ import {
 // Troque o 'role' para testar os acessos: 'admin', 'prefeitura', 'empresa' ou 'user'
 const user = {
   isLogged: true,
-  role: "user",
+  role: "admin",
 };
 
 // Componente de Proteção de Rota
@@ -39,14 +43,10 @@ function App() {
         <Route
           path="/user"
           element={
-            <ProtectedRoute allowedRoles={["user", "admin"]}>
-              <div className="p-8 bg-black-50 h-screen">
-                <h1 className="text-2xl font-bold text-white-900">
-                  Meus Dados e Documentação
-                </h1>
-                <p>Informações pessoais e documentos do imigrante.</p>
-              </div>
-            </ProtectedRoute>
+            <ProtectedRoute
+              allowedRoles={["user", "admin"]}
+              children={<User />}
+            ></ProtectedRoute>
           }
         />
 
@@ -54,14 +54,10 @@ function App() {
         <Route
           path="/prefeitura"
           element={
-            <ProtectedRoute allowedRoles={["prefeitura", "admin"]}>
-              <div className="p-8 bg-blue-50 h-screen">
-                <h1 className="text-2xl font-bold text-blue-900">
-                  Dashboard Prefeitura
-                </h1>
-                <p>Insights e dados estatísticos do ConnectaImigrante.</p>
-              </div>
-            </ProtectedRoute>
+            <ProtectedRoute
+              allowedRoles={["prefeitura", "admin"]}
+              children={<Prefeitura />}
+            ></ProtectedRoute>
           }
         />
 
@@ -69,14 +65,10 @@ function App() {
         <Route
           path="/empresa"
           element={
-            <ProtectedRoute allowedRoles={["empresa", "admin"]}>
-              <div className="p-8 bg-green-50 h-screen">
-                <h1 className="text-2xl font-bold text-green-900">
-                  Painel da Empresa
-                </h1>
-                <p>Gerencie seus horários e serviços aqui.</p>
-              </div>
-            </ProtectedRoute>
+            <ProtectedRoute
+              allowedRoles={["empresa", "admin"]}
+              children={<Empresa />}
+            ></ProtectedRoute>
           }
         />
 
@@ -84,14 +76,10 @@ function App() {
         <Route
           path="/admin"
           element={
-            <ProtectedRoute allowedRoles={["admin"]}>
-              <div className="p-8 bg-red-50 h-screen">
-                <h1 className="text-2xl font-bold text-red-900">
-                  Painel do Administrador
-                </h1>
-                <p>Gestão total do sistema.</p>
-              </div>
-            </ProtectedRoute>
+            <ProtectedRoute
+              allowedRoles={["admin"]}
+              children={<Admin />}
+            ></ProtectedRoute>
           }
         />
 
