@@ -16,7 +16,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`${color} ${className} text-white font-semibold shadow-md hover:opacity-90 hover:translate-y-[-2px] transition-all active:scale-95 cursor-pointer`}
+      className={`${color} ${className} text-white font-semibold shadow-md hover:opacity-90 hover:translate-y-0.5 transition-all active:scale-95 cursor-pointer`}
       {...rest}
     >
       {children}

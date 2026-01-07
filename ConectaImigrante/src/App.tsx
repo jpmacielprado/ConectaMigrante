@@ -1,4 +1,5 @@
-import Home from "./pages/Home.js";
+import Home from "./pages/Home.tsx";
+import Login from "./pages/Login.tsx";
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,7 +15,13 @@ const user = {
 };
 
 // Componente de Proteção de Rota
-const ProtectedRoute = ({ children, allowedRoles }: { children: React.ReactNode; allowedRoles: string[] }) => {
+const ProtectedRoute = ({
+  children,
+  allowedRoles,
+}: {
+  children: React.ReactNode;
+  allowedRoles: string[];
+}) => {
   if (!user.isLogged) return <Navigate to="/login" />;
   if (!allowedRoles.includes(user.role)) return <Navigate to="/" />;
   return children;
@@ -25,17 +32,7 @@ function App() {
     <Router>
       <Routes>
         {/* --- ROTAS PÚBLICAS --- */}
-        <Route
-          path="/login"
-          element={
-            <div className="flex h-screen items-center justify-center bg-gray-100">
-              <h1 className="text-2xl font-bold">
-                Tela de Login Google (JMK's Dev)
-              </h1>
-            </div>
-          }
-        />
-
+        <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
 
         {/* --- ÁREA DO USUÁRIO IMIGRANTE --- */}
