@@ -1,5 +1,5 @@
 import HeroImg from "../assets/heroImg.svg";
-import Logo from "../assets/logo.svg";
+import Nav from "../components/Nav";
 import Languages from "../assets/languages.svg";
 import Globe from "../assets/globe.svg";
 import PlayStore from "../assets/playstore.svg";
@@ -8,42 +8,34 @@ import Button from "../components/Button";
 
 export default function Home() {
   return (
-    <section className="relative min-h-screen bg-linear-to-r from-[#22267F] to-[#265384] overflow-hidden font-sans flex flex-col">
-      <nav className="flex items-center justify-between px-15 py-6 w-full max-w-7xl mx-auto">
-        <div className="flex items-center gap-1">
-          <img src={Logo} alt="Conecta Migrantes logo" />
-        </div>
+    <section className="relative min-h-screen bg-linear-to-r from-[#22267F] to-[#265384] overflow-hidden flex flex-col">
+      <Nav>
+        <Button className="bg-transparent gap-2 border border-white/40 hover:bg-white/10">
+          <img src={Languages} className="w-4" />
+          <img
+            src="https://flagcdn.com/w20/br.png"
+            alt="Brazil Flag"
+            className="w-5"
+          />
+          <span className="text-sm">Português</span>
+        </Button>
 
-        <div className="flex items-center gap-4">
-          <Button className=" h-8 bg-transparent gap-2 border border-white/40 text-white hover:bg-white/10 rounded-lg">
-            <img src={Languages} className="w-4" />
-            <img
-              src="https://flagcdn.com/w20/br.png"
-              alt="Brazil Flag"
-              className="w-5"
-            />
-            <span className="text-sm font-medium">Português</span>
-          </Button>
-
-          <Button color="bg-white shadow-md gap-2 h-8 py-4 px-6 rounded-lg">
-            <img
-              src="https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
-              alt="Google"
-              className="w-4"
-            />
-            <span className="text-gray-700 font-semibold">
-              Entrar com Google
-            </span>
-          </Button>
-        </div>
-      </nav>
-
+        <Button className="bg-white gap-2 h-8 py-4 px-6">
+          <img
+            src="https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
+            alt="Google"
+            className="w-4"
+          />
+          <span className="text-gray-700">Entrar com Google</span>
+        </Button>
+      </Nav>
+      
       <div className="grow flex px-15 max-w-7xl max-h-3xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
           <div className="z-10 text-white max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-[#2a3ba0] border border-white/10 px-4 py-2 rounded-full mb-8">
               <img src={Globe} />
-              <span className="text-x font-medium">
+              <span className="font-medium">
                 Conexão global para novas histórias
               </span>
             </div>
@@ -61,7 +53,7 @@ export default function Home() {
             </p>
 
             <div className="flex items-center gap-4 text-2xl">
-              <Button color="bg-[#7EBE4F] gap-2 text-xl px-8 py-3 rounded-full">
+              <Button className="bg-[#7EBE4F] text-xl px-8 py-3 rounded-full">
                 Conheça nossa plataforma
                 <img src={Arrow} alt="" />
               </Button>
