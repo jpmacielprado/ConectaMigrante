@@ -1,22 +1,19 @@
 // src/components/Button.tsx
-import { ReactNode, ButtonHTMLAttributes } from "react";
+import { ComponentProps } from "react";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
-  color?: string; // O '?' torna a prop opcional
-}
+export type ButtonProps = ComponentProps<"button">;
 
 export default function Button({
   children,
   onClick,
-  color = "bg-blue-600",
+  color = "bg-[#22267F]",
   className = "",
-  ...rest // Pega o restante das propriedades nativas de um botão
+  ...rest
 }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`${color} ${className} text-white font-semibold shadow-md hover:opacity-90 hover:translate-y-0.5 transition-all active:scale-95 cursor-pointer`}
+      className={`${color} ${className} text-white font-semibold shadow-md hover:opacity-90 hover:-translate-y-0.5 transition-all active:scale-95 cursor-pointer px-4 py-1.5 flex items-center justify-center`}
       {...rest}
     >
       {children}

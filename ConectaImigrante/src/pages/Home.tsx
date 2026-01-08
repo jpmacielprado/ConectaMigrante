@@ -15,7 +15,7 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className=" h-8 flex items-center gap-2 border border-white/40 text-white px-4 py-1.5 rounded-lg hover:bg-white/10 cursor-pointer transition">
+          <Button className=" h-8 bg-transparent gap-2 border border-white/40 text-white hover:bg-white/10 rounded-lg">
             <img src={Languages} className="w-4" />
             <img
               src="https://flagcdn.com/w20/br.png"
@@ -23,9 +23,9 @@ export default function Home() {
               className="w-5"
             />
             <span className="text-sm font-medium">Português</span>
-          </button>
+          </Button>
 
-          <Button color="bg-white shadow-md flex items-center gap-2 h-8 py-4 px-6 rounded-lg">
+          <Button color="bg-white shadow-md gap-2 h-8 py-4 px-6 rounded-lg">
             <img
               src="https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
               alt="Google"
@@ -61,12 +61,12 @@ export default function Home() {
             </p>
 
             <div className="flex items-center gap-4 text-2xl">
-              <Button color="bg-[#7EBE4F] flex items-center gap-2 font-lexend text-xl px-8 py-3 rounded-full">
+              <Button color="bg-[#7EBE4F] gap-2 text-xl px-8 py-3 rounded-full">
                 Conheça nossa plataforma
                 <img src={Arrow} alt="" />
               </Button>
 
-              <Button className="w-14 h-14 flex items-center justify-center bg-white rounded-full cursor-pointer transition shadow-lg">
+              <Button className="w-14 h-14 bg-white rounded-full shadow-lg">
                 <img src={PlayStore} className="w-5" />
               </Button>
             </div>
