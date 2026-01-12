@@ -1,9 +1,17 @@
 import Button from "../components/Button";
+import Globe from "../assets/profile_bg.png";
 
 export default function Profile() {
   return (
-    <div className="bg-gray-100 flex items-center justify-center min-h-screen p-5">
-      <div className="w-full max-w-md">
+    <div className="relative overflow-hidden bg-linear-to-r from-[#22267F] to-[#265384] flex items-center justify-center min-h-screen p-5">
+
+      <img
+        src={Globe}
+        alt="Globe"
+        className="absolute bottom-[-15%] right-[-5%] object-contain opacity-20 w-3/4 max-w-150 pointer-events-none z-0"
+      />
+
+      <div className="z-10 w-full max-w-md">
         {/* Título Superior */}
         <h2 className="text-[#1e3a8a] text-center font-bold text-xl mb-5 leading-tight">
           Este é o primeiro passo para o recomeço.
