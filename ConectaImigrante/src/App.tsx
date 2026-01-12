@@ -1,5 +1,5 @@
 import Home from "./pages/Home.tsx";
-import Login from "./pages/Login.tsx";
+import Profile from "./pages/Profile.tsx";
 import User from "./pages/User.tsx";
 import Prefeitura from "./pages/Prefeitura.tsx";
 import Empresa from "./pages/Empresa.tsx";
@@ -36,7 +36,7 @@ function App() {
     <Router>
       <Routes>
         {/* --- ROTAS PÚBLICAS --- */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/" element={<Home />} />
 
         {/* --- ÁREA DO USUÁRIO IMIGRANTE --- */}

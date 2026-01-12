@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import HeroImg from "../assets/heroImg.svg";
 import Nav from "../components/Nav";
 import Languages from "../assets/languages.svg";
@@ -7,6 +8,8 @@ import Arrow from "../assets/arrow-right.svg";
 import Button from "../components/Button";
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen bg-linear-to-r from-[#22267F] to-[#265384] overflow-hidden flex flex-col">
       <Nav>
@@ -29,7 +32,7 @@ export default function Home() {
           <span className="text-gray-700">Entrar com Google</span>
         </Button>
       </Nav>
-      
+
       <div className="grow flex px-15 max-w-7xl max-h-3xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
           <div className="z-10 text-white max-w-2xl">
@@ -53,7 +56,10 @@ export default function Home() {
             </p>
 
             <div className="flex items-center gap-4 text-2xl">
-              <Button className="bg-[#7EBE4F] text-xl px-8 py-3 rounded-full">
+              <Button
+                className="bg-[#7EBE4F] text-xl px-8 py-3 rounded-full"
+                onClick={() => navigate("/profile")}
+              >
                 Conheça nossa plataforma
                 <img src={Arrow} alt="" />
               </Button>
