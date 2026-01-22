@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-*{
-    font-family: 'Lexend', sans-serif;
-}
-:root {
-  --cor-primaria: #22267F; /* Azul */
-  --cor-secundaria: #7EBE4F; /* Verde */
-  --verde-escuro: #00521F; /* Verde Escuro */
-  --azul-claro: #265384; /* Azul Claro */
-  --cor-branca: #ffffff;
+
+* {
+  font-family: 'Lexend', sans-serif;
 }
