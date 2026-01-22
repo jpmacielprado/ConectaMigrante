@@ -4,6 +4,7 @@ import User from "./pages/User.tsx";
 import Prefeitura from "./pages/Prefeitura.tsx";
 import Empresa from "./pages/Empresa.tsx";
 import Admin from "./pages/Admin.tsx";
+import NotFound from "./pages/NotFound.tsx";
 import {
   BrowserRouter as Router,
   Routes,
@@ -84,12 +85,7 @@ function App() {
         />
 
         {/* ROTA 404 */}
-        <Route
-          path="*"
-          element={
-            <div className="p-8 text-center">Página não encontrada!</div>
-          }
-        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

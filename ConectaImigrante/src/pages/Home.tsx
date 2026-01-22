@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import HeroImg from "../assets/heroImg.svg";
-import Nav from "../components/Nav";
+import Nav from "../components/Header";
 import Languages from "../assets/languages.svg";
 import Globe from "../assets/globe.svg";
 import PlayStore from "../assets/playstore.svg";
