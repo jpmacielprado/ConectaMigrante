@@ -16,24 +16,28 @@ export default function Home() {
   return (
     <section className="relative min-h-screen bg-linear-to-r from-[#22267F] to-[#265384] overflow-hidden flex flex-col">
       <Nav>
-        <Button className="bg-transparent gap-2 border border-white/40 hover:bg-white/10">
-          <img src={Languages} className="w-4" />
-          <img
-            src="https://flagcdn.com/w20/br.png"
-            alt="Brazil Flag"
-            className="w-5"
-          />
-          <span className="text-sm">Português</span>
-        </Button>
+        <Reveal delay={0.1}>
+          <Button className="bg-transparent gap-2 border border-white/40 hover:bg-white/10">
+            <img src={Languages} className="w-4" />
+            <img
+              src="https://flagcdn.com/w20/br.png"
+              alt="Brazil Flag"
+              className="w-5"
+            />
+            <span className="text-sm">Português</span>
+          </Button>
+        </Reveal>
 
-        <Button className="bg-white gap-2 h-8 py-4 px-6">
-          <img
-            src="https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
-            alt="Google"
-            className="w-4"
-          />
-          <span className="text-gray-700">Entrar com Google</span>
-        </Button>
+        <Reveal delay={0.2}>
+          <Button className="bg-white gap-2 h-8 py-4 px-6">
+            <img
+              src="https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
+              alt="Google"
+              className="w-4"
+            />
+            <span className="text-gray-700">Entrar com Google</span>
+          </Button>
+        </Reveal>
       </Nav>
 
       <div className="grow flex px-15 max-w-7xl max-h-3xl mx-auto">
@@ -70,6 +74,7 @@ export default function Home() {
                   <img src={Arrow} alt="" />
                 </Button>
               </Reveal>
+
               <Reveal delay={0.5}>
                 <Button className="w-14 h-14 bg-white rounded-full shadow-lg">
                   <img src={PlayStore} className="w-5" />
