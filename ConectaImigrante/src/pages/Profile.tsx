@@ -3,7 +3,7 @@ import Globe from "../assets/profile_bg.png";
 import Reveal from "../components/Reveal";
 export default function Profile() {
   return (
-    <div className="relative overflow-hidden bg-linear-to-r from-[#22267F] to-[#265384] flex items-center justify-center min-h-screen p-5">
+    <div className="relative overflow-hidden bg-linear-to-r from-[#22267F] to-[#265384] flex items-center justify-center h-screen p-5">
 
       <img
         src={Globe}
@@ -83,9 +83,14 @@ export default function Profile() {
                 </div>
               </div>
 
-              <Button type="submit" className="w-full bg-[#7EBE4F] py-3">
-                Continuar
-              </Button>
+              <div className="flex flex-col gap-3 items-center justify-between">
+                <Button type="submit" className="w-full bg-[#7EBE4F] py-3">
+                  Continuar
+                </Button>
+                <a className="flex items-center" href="/">
+                  <p className="text-sm text-white hover:underline">Voltar para página inicial</p>
+                </a>
+              </div>
             </form>
           </div>
         </Reveal>
